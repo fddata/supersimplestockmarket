@@ -23,6 +23,8 @@ public class StockMarket {
 
     public  double calculateGeometricMean(){
 
+//        TODO Refactor this into separate methods?
+
 //        first get an array of prices for each trade:
 
         double[] priceArray = new double[this.getNumberOfTrades()];
@@ -37,9 +39,12 @@ public class StockMarket {
         }
 
 //        then take the 1/n power of this sum:
-        System.out.println("reducer sum is: " + reducerSum);
-        System.out.println("pricearray length is: " + priceArray.length);
         return Math.pow(reducerSum, (1.0 / priceArray.length));
 
+    }
+
+    public double calculateVolumeWeightedStockPrice(){
+//        TODO write this method!
+        return 1.0;
     }
 }

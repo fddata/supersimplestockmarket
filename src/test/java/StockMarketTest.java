@@ -1,3 +1,4 @@
+import com.sun.xml.internal.bind.v2.TODO;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -53,5 +54,10 @@ public class StockMarketTest {
     @Test
     public void canCalculateGeometricMean() {
         assertEquals(4.96, stockMarket.calculateGeometricMean(),0.01);
+    }
+
+    @Test
+    public void canCalculateVolumeWeightedStockPrice() {
+//        TODO calculate the test expected and write the method here
     }
 }
