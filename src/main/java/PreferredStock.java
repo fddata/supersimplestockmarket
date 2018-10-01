@@ -10,4 +10,8 @@ public class PreferredStock extends CommonStock {
     public double getFixedDividend() {
         return fixedDividend;
     }
+
+    public double calculateDividendYield(double price){
+        return ((this.getFixedDividend() * this.getParValue()) / price);
+    }
 }

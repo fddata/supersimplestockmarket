@@ -9,11 +9,16 @@ public class PreferredStockTest {
 
     @Before
     public void setUp() throws Exception {
-        preferredStock = new PreferredStock("GIN", 8, 100, 0.02);
+        preferredStock = new PreferredStock("GIN", 8, 100,  0.02);
     }
 
     @Test
     public void getFixedDividend() {
         assertEquals(0.02, preferredStock.getFixedDividend(), 0);
+    }
+
+    @Test
+    public void calculateDividendYield() {
+        assertEquals(2, preferredStock.calculateDividendYield(1.00), 0);
     }
 }

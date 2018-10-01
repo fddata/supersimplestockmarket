@@ -9,7 +9,7 @@ public class CommonStockTest {
 
     @Before
     public void setUp() throws Exception {
-        commonStock = new CommonStock("TEA", 0, 100);
+        commonStock = new CommonStock("TEA", 1, 100);
     }
 
     @Test
@@ -19,11 +19,17 @@ public class CommonStockTest {
 
     @Test
     public void canGetLastDividend() {
-        assertEquals(0, commonStock.getLastDividend(), 0);
+        assertEquals(1, commonStock.getLastDividend(), 0);
     }
 
     @Test
     public void canGetParValue() {
         assertEquals(100, commonStock.getParValue(), 0);
+    }
+
+
+    @Test
+    public void calculateDividendYield() {
+        assertEquals(0.095, commonStock.calculateDividendYield(10.5), 0.01);
     }
 }
