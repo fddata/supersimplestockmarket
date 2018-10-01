@@ -4,8 +4,8 @@ public class StockMarket {
 
     private ArrayList<Trade> trades;
 
-    public StockMarket(ArrayList<Trade> trades) {
-        this.trades = trades;
+    public StockMarket() {
+        this.trades = new ArrayList<>();
     }
 
     public ArrayList<Trade> getTrades() {
