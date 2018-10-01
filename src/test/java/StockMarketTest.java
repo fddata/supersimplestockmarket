@@ -29,11 +29,11 @@ public class StockMarketTest {
         stockJOE = new CommonStock("JOE", 13,250);
 
 //        setting up some trades - note timestamps will be set when a test is run
-        tradeTEA = new Trade(stockTEA, 10, true, 20.40);
-        tradePOP = new Trade(stockPOP, 100, false, 50.00);
+        tradeTEA = new Trade(stockTEA, 10, true, 1.00);
+        tradePOP = new Trade(stockPOP, 100, false, 3.00);
         tradeALE = new Trade(stockALE, 1,false,20.00);
         tradeGIN = new Trade(stockGIN, 50,true, 10.00);
-        tradeJOE = new Trade(stockJOE,200,true,500.00);
+        tradeJOE = new Trade(stockJOE,200,true,5.00);
 
 //        adding trades to the stock market
         stockMarket = new StockMarket();
@@ -47,5 +47,11 @@ public class StockMarketTest {
     @Test
     public void stockMarketHasTrades() {
         assertEquals(5, stockMarket.getNumberOfTrades(), 0);
+    }
+
+
+    @Test
+    public void canCalculateGeometricMean() {
+        assertEquals(4.96, stockMarket.calculateGeometricMean(),0.01);
     }
 }

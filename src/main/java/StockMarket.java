@@ -26,7 +26,7 @@ public class StockMarket {
 //        first get an array of prices for each trade:
 
         double[] priceArray = new double[this.getNumberOfTrades()];
-        for (int i = 0; i <= this.getNumberOfTrades(); i++ ){
+        for (int i = 0; i < this.getNumberOfTrades(); i++ ){
              priceArray[i] = this.trades.get(i).getTradedPrice();
         }
 //        then multiply these prices together:
@@ -37,8 +37,9 @@ public class StockMarket {
         }
 
 //        then take the 1/n power of this sum:
-
-        return Math.pow(reducerSum, 1 / priceArray.length);
+        System.out.println("reducer sum is: " + reducerSum);
+        System.out.println("pricearray length is: " + priceArray.length);
+        return Math.pow(reducerSum, (1.0 / priceArray.length));
 
     }
 }
