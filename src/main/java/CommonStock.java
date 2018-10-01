@@ -10,8 +10,6 @@ public class CommonStock {
                 this.symbol = symbol;
                 this.lastDividend = lastDividend;
                 this.parValue = parValue;
-
-
         }
 
 
@@ -29,5 +27,9 @@ public class CommonStock {
 
         public double calculateDividendYield(double price){
                 return (this.lastDividend / price);
+        }
+
+        public double calculatePERatio(double price){
+                return (price / this.lastDividend);
         }
 }

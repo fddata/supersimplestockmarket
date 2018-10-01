@@ -32,4 +32,9 @@ public class CommonStockTest {
     public void calculateDividendYield() {
         assertEquals(0.095, commonStock.calculateDividendYield(10.5), 0.01);
     }
+
+    @Test
+    public void calculatePERatio() {
+        assertEquals(40, commonStock.calculatePERatio(40.00),0);
+    }
 }
