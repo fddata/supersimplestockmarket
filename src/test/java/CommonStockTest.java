@@ -1,15 +1,20 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.sql.Timestamp;
+
 import static org.junit.Assert.*;
 
 public class CommonStockTest {
 
     CommonStock commonStock;
 
+
+
     @Before
     public void setUp() throws Exception {
         commonStock = new CommonStock("TEA", 1, 100);
+
     }
 
     @Test
